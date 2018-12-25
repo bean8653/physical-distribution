@@ -1,0 +1,6 @@
+2018-12-13 21:21:39,472 [main] Starting PhysicalDistributionApplication on DESKTOP-DJMNJE1 with PID 14292 (C:\developer\RESEARCH\YH\physical-distribution\target\classes started by czm in C:\developer\RESEARCH\YH\physical-distribution)
+2018-12-13 21:21:39,487 [main] Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-12-13 21:21:39,487 [main] No active profile set, falling back to default profiles: default
+2018-12-13 21:21:45,392 [localhost-startStop-1] Initializing filter 'tokenFilter'
+2018-12-13 21:21:45,392 [localhost-startStop-1] Filter 'tokenFilter' configured successfully
+2018-12-13 21:21:48,876 [main] Started PhysicalDistributionApplication in 9.982 seconds (JVM running for 13.04)

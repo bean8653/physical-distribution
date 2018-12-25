@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<form class="form-horizontal" onsubmit="return false" id="form">
+		<fieldset>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>手机号码</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='phone' type='text' name='phone' id='phone' data-bv-notempty='true' data-bv-notempty-message='phone 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>密码</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='password' type='text' name='password' id='password' data-bv-notempty='true' data-bv-notempty-message='password 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>姓名</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='name' type='text' name='name' id='name' data-bv-notempty='true' data-bv-notempty-message='name 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>驾驶证号码</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='drivinglicensenum' type='text' name='drivinglicensenum' id='drivinglicensenum' data-bv-notempty='true' data-bv-notempty-message='drivinglicensenum 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>家庭地址</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='address' type='text' name='address' id='address' data-bv-notempty='true' data-bv-notempty-message='address 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>车牌</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='vannum' type='text' name='vannum' id='vannum' data-bv-notempty='true' data-bv-notempty-message='vannum 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>所属公司</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='company' type='text' name='company' id='company' data-bv-notempty='true' data-bv-notempty-message='company 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>发动机号</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='enginetype' type='text' name='enginetype' id='enginetype' data-bv-notempty='true' data-bv-notempty-message='enginetype 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>车架号</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='chassisnum' type='text' name='chassisnum' id='chassisnum' data-bv-notempty='true' data-bv-notempty-message='chassisnum 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>车型</label>
+				<div class="col-md-10" style="width: 100px">
+					<select class="form-control input-sm" name="vanmodel" id="vanmodel">
+					</select>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>样式</label>
+				<div class="col-md-10" style="width: 100px">
+					<select class="form-control input-sm" name="vantype" id="vantype">
+					</select>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>载重(吨)</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='vanload' type='text' name='vanload' id='vanload' data-bv-notempty='true' data-bv-notempty-message='vanload 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>厢长(米)</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='vanlength' type='text' name='vanlength' id='vanlength' data-bv-notempty='true' data-bv-notempty-message='vanlength 不能为空'>
+				</div>
+			</div>
+
+
+			<div class="form-actions">
+				<div class="row" align="center">
+					<div class="col-md-12">
+					    <button class="btn btn-primary" onclick="location.href='vanList.html'">返回</button>
+						<button class="btn btn-primary" type="submit" onclick="add()">
+							<i class="fa fa-save"></i> 保存
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+	<script type="text/javascript" src="../../js/libs/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jq.js"></script>
+	<script type="text/javascript" src="../../js/plugin/bootstrapvalidator/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../layui/layui.js"></script>
+	<script type="text/javascript" src="../../js/dict.js"></script>
+	<script type="text/javascript">
+		layui.use(['layer','laydate'], function(){
+		    var layer = layui.layer;
+		});
+
+        showDictSelect("vanmodel", "vanModel");
+        showDictSelect("vantype", "vanType");
+		
+		function add() {
+			$('#form').bootstrapValidator();
+			var bootstrapValidator = $("#form").data('bootstrapValidator');
+			bootstrapValidator.validate();
+		    if(!bootstrapValidator.isValid()){
+			   return;
+		    }
+		    
+		    var formdata = $("#form").serializeObject();
+
+			$.ajax({
+				type : 'post',
+				url : '/vans',
+				contentType: "application/json; charset=utf-8",  
+				data : JSON.stringify(formdata),
+				success : function(data) {
+					layer.msg("添加成功", {shift: -1, time: 1000}, function(){
+                        location.href = "vanList.html";
+                    });
+				}
+			});
+		}
+		
+	</script>
+</body>
+</html>

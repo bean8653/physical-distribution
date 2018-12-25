@@ -1,0 +1,18 @@
+2018-12-25 21:59:55,933 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter -[LoggingFailureAnalysisReporter.java:42]- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field fileService in com.billion.logistics.physicaldistribution.system.controller.FileController required a bean of type 'com.billion.logistics.physicaldistribution.system.service.FileService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.billion.logistics.physicaldistribution.system.service.FileService' in your configuration.
+

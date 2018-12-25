@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<form class="form-horizontal" onsubmit="return false" id="form">
+		<fieldset>
+			<input type="hidden" id="id" name="id">
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>订单编号</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='orderId' type='text' name='orderId' id='orderId' data-bv-notempty='true' data-bv-notempty-message='orderId 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>发货站</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='outStation' type='text' name='outStation' id='outStation' data-bv-notempty='true' data-bv-notempty-message='outStation 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>收货站</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='inStation' type='text' name='inStation' id='inStation' data-bv-notempty='true' data-bv-notempty-message='inStation 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>发货人姓名</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='outName' type='text' name='outName' id='outName' data-bv-notempty='true' data-bv-notempty-message='outName 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>发货人电话</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='outPhone' type='text' name='outPhone' id='outPhone' data-bv-notempty='true' data-bv-notempty-message='outPhone 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>发货人身份证</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='outNum' type='text' name='outNum' id='outNum' data-bv-notempty='true' data-bv-notempty-message='outNum 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>收货人姓名</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='inName' type='text' name='inName' id='inName' data-bv-notempty='true' data-bv-notempty-message='inName 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>收货人电话</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='inPhone' type='text' name='inPhone' id='inPhone' data-bv-notempty='true' data-bv-notempty-message='inPhone 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>运费</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='haulage' type='text' name='haulage' id='haulage' data-bv-notempty='true' data-bv-notempty-message='haulage 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>代收款</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='agencyFree' type='text' name='agencyFree' id='agencyFree' data-bv-notempty='true' data-bv-notempty-message='agencyFree 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>付垫费</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='matFree' type='text' name='matFree' id='matFree' data-bv-notempty='true' data-bv-notempty-message='matFree 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>保价费</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='insuredFree' type='text' name='insuredFree' id='insuredFree' data-bv-notempty='true' data-bv-notempty-message='insuredFree 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>货物价值</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='goodsValue' type='text' name='goodsValue' id='goodsValue' data-bv-notempty='true' data-bv-notempty-message='goodsValue 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>付款方式</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='paymentType' type='text' name='paymentType' id='paymentType' data-bv-notempty='true' data-bv-notempty-message='paymentType 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>提送方式</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='deliveryType' type='text' name='deliveryType' id='deliveryType' data-bv-notempty='true' data-bv-notempty-message='deliveryType 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>备注</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='remarks' type='text' name='remarks' id='remarks' data-bv-notempty='true' data-bv-notempty-message='remarks 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>订单日期</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='orderTime' type='text' name='orderTime' id='orderTime' data-bv-notempty='true' data-bv-notempty-message='orderTime 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>状态</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='orderValidity' type='text' name='orderValidity' id='orderValidity' data-bv-notempty='true' data-bv-notempty-message='orderValidity 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>货物名称</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='goodsName' type='text' name='goodsName' id='goodsName' data-bv-notempty='true' data-bv-notempty-message='goodsName 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>货物数量</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='goodsNum' type='text' name='goodsNum' id='goodsNum' data-bv-notempty='true' data-bv-notempty-message='goodsNum 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>包装方式</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='goodsPack' type='text' name='goodsPack' id='goodsPack' data-bv-notempty='true' data-bv-notempty-message='goodsPack 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>单位</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='goodsUnit' type='text' name='goodsUnit' id='goodsUnit' data-bv-notempty='true' data-bv-notempty-message='goodsUnit 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>重量(kg)</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='goodsWeight' type='text' name='goodsWeight' id='goodsWeight' data-bv-notempty='true' data-bv-notempty-message='goodsWeight 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>体积(m³)</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='goodsVolume' type='text' name='goodsVolume' id='goodsVolume' data-bv-notempty='true' data-bv-notempty-message='goodsVolume 不能为空'>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label class='col-md-2 control-label'>订单生成站点</label>
+				<div class='col-md-10'>
+					<input class='form-control' placeholder='station' type='text' name='station' id='station' data-bv-notempty='true' data-bv-notempty-message='station 不能为空'>
+				</div>
+			</div>
+
+
+
+			<div class="form-actions">
+				<div class="row" align="center">
+					<div class="col-md-12">
+					    <button class="btn btn-primary" onclick="location.href='orderList.html'">返回</button>
+						<button class="btn btn-primary" type="submit" onclick="update()">
+							<i class="fa fa-save"></i> 保存
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+	<script type="text/javascript" src="../../js/libs/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jq.js"></script>
+	<script type="text/javascript" src="../../js/plugin/bootstrapvalidator/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use(['layer','laydate'], function(){
+		    var layer = layui.layer;
+		});
+		
+		initData();
+		
+		function initData(){
+			var id = getUrlParam("id");
+			if(id != ""){
+				$.ajax({
+					type : 'get',
+					url : '/orders/'+id,
+					async : false,
+					success : function(data) {
+						$('#id').val(data.id);
+						$('#orderId').val(data.orderId);
+						$('#outStation').val(data.outStation);
+						$('#inStation').val(data.inStation);
+						$('#outName').val(data.outName);
+						$('#outPhone').val(data.outPhone);
+						$('#outNum').val(data.outNum);
+						$('#inName').val(data.inName);
+						$('#inPhone').val(data.inPhone);
+						$('#haulage').val(data.haulage);
+						$('#agencyFree').val(data.agencyFree);
+						$('#matFree').val(data.matFree);
+						$('#insuredFree').val(data.insuredFree);
+						$('#goodsValue').val(data.goodsValue);
+						$('#paymentType').val(data.paymentType);
+						$('#deliveryType').val(data.deliveryType);
+						$('#remarks').val(data.remarks);
+						$('#orderTime').val(data.orderTime);
+						$('#orderValidity').val(data.orderValidity);
+						$('#goodsName').val(data.goodsName);
+						$('#goodsNum').val(data.goodsNum);
+						$('#goodsPack').val(data.goodsPack);
+						$('#goodsUnit').val(data.goodsUnit);
+						$('#goodsWeight').val(data.goodsWeight);
+						$('#goodsVolume').val(data.goodsVolume);
+						$('#station').val(data.station);
+
+					}
+				});
+			}
+		}
+
+		function update() {
+			$('#form').bootstrapValidator();
+			var bootstrapValidator = $("#form").data('bootstrapValidator');
+			bootstrapValidator.validate();
+		    if(!bootstrapValidator.isValid()){
+			   return;
+		    }
+		    
+		    var formdata = $("#form").serializeObject();
+
+			$.ajax({
+				type : 'put',
+				url : '/orders',
+				contentType: "application/json; charset=utf-8",  
+				data : JSON.stringify(formdata),
+				success : function(data) {
+					layer.msg("修改成功", {shift: -1, time: 1000}, function(){
+                        location.href = "orderList.html";
+                    });
+				}
+			});
+		}
+		
+	</script>
+</body>
+</html>

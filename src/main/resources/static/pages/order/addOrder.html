@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<form class="form-horizontal" onsubmit="return false" id="form">
+		<fieldset>
+			<table class="table">
+				<caption>订单基本信息</caption>
+				<tbody>
+				<tr>
+					<td width="10%">发货站</td>
+					<td width="10%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="outStation" id="outStation">
+							</select>
+						</div>
+					</td>
+					<td width="10%">收货站</td>
+					<td width="10%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="inStation" id="inStation">
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">发货人姓名</td>
+					<td width="10%">
+						<input class="form-control" placeholder="发货人姓名" type="text" name="outName" id="outName"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="发货人姓名不能为空">
+					</td>
+					<td width="10%">发货人电话</td>
+					<td width="10%">
+						<input class="form-control" placeholder="发货人电话" type="text" name="outPhone" id="outPhone"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="发货人电话不能为空">
+					</td>
+					<td width="10%">发货人身份证</td>
+					<td width="10%">
+						<input class="form-control" placeholder="发货人身份证" type="text" name="outNum" id="outNum"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="发货人身份证不能为空">
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">收货人姓名</td>
+					<td width="10%">
+						<input class="form-control" placeholder="收货人姓名" type="text" name="inName" id="inName"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="收货人姓名不能为空">
+					</td>
+					<td width="10%">收货人电话</td>
+					<td width="10%">
+						<input class="form-control" placeholder="收货人电话" type="text" name="inPhone" id="inPhone"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="收货人电话不能为空">
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">运费</td>
+					<td width="10%">
+						<input class="form-control" placeholder="运费" type="text" name="haulage" id="haulage"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="运费不能为空">
+					</td>
+					<td width="10%">代收款</td>
+					<td width="10%">
+						<input class="form-control" placeholder="代收款" type="text" name="agencyFree" id="agencyFree"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="收货人电话不能为空">
+					</td>
+					<td width="10%">付垫费</td>
+					<td width="10%">
+						<input class="form-control" placeholder="付垫费" type="text" name="matFree" id="matFree"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="付垫费不能为空">
+					</td>
+					<td width="10%">保价费</td>
+					<td width="10%">
+						<input class="form-control" placeholder="保价费" type="text" name="insuredFree" id="insuredFree"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="保价费不能为空">
+					</td>
+					<td width="10%">货物价值</td>
+					<td width="10%">
+						<input class="form-control" placeholder="货物价值" type="text" name="goodsValue" id="goodsValue"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="货物价值不能为空">
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">货物名称</td>
+					<td width="10%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="goodsName" id="goodsName">
+							</select>
+						</div>
+					</td>
+					<td width="10%">货物数量</td>
+					<td width="10%">
+						<input class="form-control" placeholder="货物数量" type="text" name="goodsNum" id="goodsNum"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="货物数量不能为空">
+					</td>
+					<td width="10%">包装方式</td>
+					<td width="10%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="goodsPack" id="goodsPack">
+							</select>
+						</div>
+					</td>
+					<td width="10%">单位</td>
+					<td width="10%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="goodsUnit" id="goodsUnit">
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">重量(kg)</td>
+					<td width="10%">
+						<input class="form-control" placeholder="重量(kg)" type="text" name="goodsWeight" id="goodsWeight"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="重量(kg)不能为空">
+					</td>
+					<td width="10%">体积(m³)</td>
+					<td width="10%">
+						<input class="form-control" placeholder="体积(m³)" type="text" name="goodsVolume" id="goodsVolume"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="体积(m³)不能为空">
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">付款方式</td>
+					<td width="10%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="paymentType" id="paymentType">
+							</select>
+						</div>
+					</td>
+					<td width="10%">提送方式</td>
+					<td width="10%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="deliveryType" id="deliveryType">
+							</select>
+						</div>
+					</td>
+					<td width="10%">订单日期</td>
+					<td width="10%">
+						<input class="form-control" placeholder="订单日期" type="text" name="orderTime" id="orderTime"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="订单日期不能为空">
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">备注</td>
+					<td  colspan="8">
+						<input class="form-control" placeholder="备注" type="text" name="remarks" id="remarks"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="备注不能为空">
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<div class="form-actions">
+				<div class="row" align="center">
+					<div class="col-md-12">
+					    <button class="btn btn-primary" onclick="location.href='orderList.html'">返回</button>
+						<button class="btn btn-primary" type="submit" onclick="add()">
+							<i class="fa fa-save"></i> 保存
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+</div>
+	<script type="text/javascript" src="../../js/libs/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jq.js"></script>
+	<script type="text/javascript" src="../../js/plugin/bootstrapvalidator/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../layui/layui.js"></script>
+	<script type="text/javascript" src="../../js/dict.js"></script>
+	<script type="text/javascript">
+		layui.use(['layer','laydate'], function(){
+		    var layer = layui.layer;
+		});
+        showDictSelect("outStation", "station");
+        showDictSelect("inStation", "station");
+        showDictSelect("goodsName", "goodsNames");
+        showDictSelect("goodsPack", "goodsPacks");
+        showDictSelect("goodsUnit", "goodsUnits");
+        showDictSelect("paymentType", "paymentTypes");
+        showDictSelect("deliveryType", "deliveryTypes");
+
+        function add() {
+			$('#form').bootstrapValidator();
+			var bootstrapValidator = $("#form").data('bootstrapValidator');
+			bootstrapValidator.validate();
+		    if(!bootstrapValidator.isValid()){
+			   return;
+		    }
+		    
+		    var formdata = $("#form").serializeObject();
+
+			$.ajax({
+				type : 'post',
+				url : '/orders',
+				contentType: "application/json; charset=utf-8",  
+				data : JSON.stringify(formdata),
+				success : function(data) {
+					layer.msg("添加成功", {shift: -1, time: 1000}, function(){
+                        location.href = "orderList.html";
+                    });
+				}
+			});
+		}
+		
+	</script>
+</body>
+</html>
