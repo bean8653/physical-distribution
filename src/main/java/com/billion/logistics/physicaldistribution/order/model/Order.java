@@ -6,32 +6,31 @@ import java.util.Date;
 
 public class Order extends BaseEntity<Long> {
 
-	private String orderId;
-	private String outStation;
-	private String inStation;
-	private String outName;
-	private String outPhone;
-	private String outNum;
-	private String inName;
-	private String inPhone;
-	private String tOrdercol;
-	private BigDecimal haulage;
-	private BigDecimal agencyFree;
-	private BigDecimal matFree;
-	private BigDecimal insuredFree;
-	private BigDecimal goodsValue;
-	private String paymentType;
-	private String deliveryType;
-	private String remarks;
-	private Date orderTime;
-	private String orderValidity;
-	private String goodsName;
-	private Integer goodsNum;
-	private String goodsPack;
-	private String goodsUnit;
-	private Integer goodsWeight;
-	private Integer goodsVolume;
-	private String station;
+	private String orderId; //订单编号
+	private String outStation;//发货点
+	private String inStation;//收货点
+	private String outName;//发货人姓名
+	private String outPhone;//发货人电话
+	private String outNum;//发货人身份证号码
+	private String inName;//s收货人
+	private String inPhone;//收货人电话
+	private BigDecimal haulage;//运费
+	private BigDecimal agencyFree;//代收款
+	private BigDecimal matFree;//付垫费
+	private BigDecimal insuredFree;//保价费
+	private BigDecimal goodsValue;//货物价值
+	private String paymentType;//付款方式
+	private String deliveryType;//提送方式
+	private String remarks;//备注
+	private Date orderTime;//订单日期
+	private String orderValidity;//状态
+	private String goodsName;//货物名称
+	private Integer goodsNum;//货物数量
+	private String goodsPack;//包装方式
+	private String goodsUnit;//单位
+	private Integer goodsWeight;//重量
+	private Integer goodsVolume;//体积
+	private String station;//订单生成站点
 
 	public String getOrderId() {
 		return orderId;
@@ -80,12 +79,6 @@ public class Order extends BaseEntity<Long> {
 	}
 	public void setInPhone(String inPhone) {
 		this.inPhone = inPhone;
-	}
-	public String getTOrdercol() {
-		return tOrdercol;
-	}
-	public void setTOrdercol(String tOrdercol) {
-		this.tOrdercol = tOrdercol;
 	}
 	public BigDecimal getHaulage() {
 		return haulage;
