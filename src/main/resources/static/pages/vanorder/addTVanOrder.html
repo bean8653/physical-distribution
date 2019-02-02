@@ -9,29 +9,26 @@
 	<form class="form-horizontal" onsubmit="return false" id="form">
 		<fieldset>
 			<div class='form-group'>
-				<label class='col-md-2 control-label'>outStation</label>
-				<div class='col-md-10'>
-					<input class='form-control' placeholder='outStation' type='text' name='outStation' id='outStation' data-bv-notempty='true' data-bv-notempty-message='outStation 不能为空'>
+				<label class='col-md-2 control-label'>发货站</label>
+				<div class="col-md-10" style="width: 100px">
+					<select class="form-control input-sm" name="outStation" id="outStation">
+					</select>
 				</div>
 			</div>
 			<div class='form-group'>
-				<label class='col-md-2 control-label'>inStation</label>
-				<div class='col-md-10'>
-					<input class='form-control' placeholder='inStation' type='text' name='inStation' id='inStation' data-bv-notempty='true' data-bv-notempty-message='inStation 不能为空'>
+				<label class='col-md-2 control-label'>收货站</label>
+				<div class="col-md-10" style="width: 100px">
+					<select class="form-control input-sm" name="inStation" id="inStation">
+					</select>
 				</div>
 			</div>
 			<div class='form-group'>
-				<label class='col-md-2 control-label'>free</label>
+				<label class='col-md-2 control-label'>运费</label>
 				<div class='col-md-10'>
-					<input class='form-control' placeholder='free' type='text' name='free' id='free' data-bv-notempty='true' data-bv-notempty-message='free 不能为空'>
+					<input class='form-control' placeholder='运费' type='text' name='free' id='free' data-bv-notempty='true' data-bv-notempty-message='free 不能为空'>
 				</div>
 			</div>
-			<div class='form-group'>
-				<label class='col-md-2 control-label'>status</label>
-				<div class='col-md-10'>
-					<input class='form-control' placeholder='status' type='text' name='status' id='status' data-bv-notempty='true' data-bv-notempty-message='status 不能为空'>
-				</div>
-			</div>
+			<input class='form-control' placeholder='status' type='hidden' name='status' id='status'   value="1" >
 
 
 			<div class="form-actions">
@@ -53,11 +50,13 @@
 	<script type="text/javascript" src="../../js/plugin/bootstrapvalidator/bootstrapValidator.min.js"></script>
 	<script type="text/javascript" src="../../js/common.js"></script>
 	<script type="text/javascript" src="../../layui/layui.js"></script>
+	<script type="text/javascript" src="../../js/dict.js"></script>
 	<script type="text/javascript">
 		layui.use(['layer','laydate'], function(){
 		    var layer = layui.layer;
 		});
-		
+        showDictSelect("outStation", "station");
+        showDictSelect("inStation", "station");
 		function add() {
 			$('#form').bootstrapValidator();
 			var bootstrapValidator = $("#form").data('bootstrapValidator');

@@ -31,6 +31,7 @@ public class Order extends BaseEntity<Long> {
 	private Integer goodsWeight;//重量
 	private Integer goodsVolume;//体积
 	private String station;//订单生成站点
+	private String orderSource;//订单生成来源
 
 	public String getOrderId() {
 		return orderId;
@@ -182,5 +183,6 @@ public class Order extends BaseEntity<Long> {
 	public void setStation(String station) {
 		this.station = station;
 	}
-
+	public String getOrderSource() { return orderSource;	}
+	public void setOrderSource(String orderSource) { this.orderSource = orderSource;	}
 }

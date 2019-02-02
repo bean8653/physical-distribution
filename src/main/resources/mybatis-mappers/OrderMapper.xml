@@ -89,7 +89,9 @@
 			<if test="params.station != null and params.station != ''">
 				and station = #{params.station} 
 			</if>
-		
+			<if test="params.orderSource != null and params.orderSource != ''">
+				and orderSource = #{params.orderSource}
+			</if>
 		</where>
 	</sql>
 
@@ -188,6 +190,9 @@
 			</if>
 			<if test="station != null">
 				station = #{station}, 
+			</if>
+			<if test="orderSource != null">
+				orderSource = #{orderSource},
 			</if>
 
 		</set>

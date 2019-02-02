@@ -24,7 +24,7 @@ public interface OrderDao {
     int update(Order order);
     
     @Options(useGeneratedKeys = true, keyProperty = "id")
-    @Insert("insert into t_goods_order(orderId, outStation, inStation, outName, outPhone, outNum, inName, inPhone, t_ordercol, haulage, agencyFree, matFree, insuredFree, goodsValue, paymentType, deliveryType, remarks, createTime, orderTime, orderValidity, goodsName, goodsNum, goodsPack, goodsUnit, goodsWeight, goodsVolume, station) values(#{orderId}, #{outStation}, #{inStation}, #{outName}, #{outPhone}, #{outNum}, #{inName}, #{inPhone}, #{tOrdercol}, #{haulage}, #{agencyFree}, #{matFree}, #{insuredFree}, #{goodsValue}, #{paymentType}, #{deliveryType}, #{remarks}, now(), #{orderTime}, #{orderValidity}, #{goodsName}, #{goodsNum}, #{goodsPack}, #{goodsUnit}, #{goodsWeight}, #{goodsVolume}, #{station})")
+    @Insert("insert into t_goods_order(orderId, outStation, inStation, outName, outPhone, outNum, inName, inPhone, haulage, agencyFree, matFree, insuredFree, goodsValue, paymentType, deliveryType, remarks, createTime, orderTime, orderValidity, goodsName, goodsNum, goodsPack, goodsUnit, goodsWeight, goodsVolume, station,orderSource) values(#{orderId}, #{outStation}, #{inStation}, #{outName}, #{outPhone}, #{outNum}, #{inName}, #{inPhone}, #{haulage}, #{agencyFree}, #{matFree}, #{insuredFree}, #{goodsValue}, #{paymentType}, #{deliveryType}, #{remarks}, now(), #{orderTime}, #{orderValidity}, #{goodsName}, #{goodsNum}, #{goodsPack}, #{goodsUnit}, #{goodsWeight}, #{goodsVolume}, #{station}, #{orderSource})")
     int save(Order order);
     
     int count(@Param("params") Map<String, Object> params);
