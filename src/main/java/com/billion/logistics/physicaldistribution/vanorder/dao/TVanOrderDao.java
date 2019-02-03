@@ -24,10 +24,12 @@ public interface TVanOrderDao {
     int update(TVanOrder tVanOrder);
     
     @Options(useGeneratedKeys = true, keyProperty = "id")
-    @Insert("insert into t_van_order(outStation, inStation, free, createTime, status) values(#{outStation}, #{inStation}, #{free}, #{createTime}, #{status})")
+    @Insert("insert into t_van_order(outStation, inStation, free, createTime, status) values(#{outStation}, #{inStation}, #{free}, now(), #{status})")
     int save(TVanOrder tVanOrder);
     
     int count(@Param("params") Map<String, Object> params);
 
     List<TVanOrder> list(@Param("params") Map<String, Object> params, @Param("offset") Integer offset, @Param("limit") Integer limit);
+
+    int moveOrderToVan(TVanOrder tVanOrder);
 }

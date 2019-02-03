@@ -10,6 +10,7 @@ public class TVanOrder extends BaseEntity<Long> {
 	private String inStation;
 	private BigDecimal free;
 	private String status;
+	private Date orderTime;//订单日期
 
 	public String getOutStation() {
 		return outStation;
@@ -35,5 +36,10 @@ public class TVanOrder extends BaseEntity<Long> {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
+	public Date getOrderTime() {
+		return orderTime;
+	}
+	public void setOrderTime(Date orderTime) {
+		this.orderTime = orderTime;
+	}
 }

@@ -59,8 +59,74 @@
 			</if>
 
 		</set>
-
 		where t.id = #{id}
 	</update>
 
+	<insert id="moveOrderToVan">
+        insert into t_goods_van_order(
+                orderId,
+                outStation,
+                inStation,
+                outName,
+                outPhone,
+                outNum,
+                inName,
+                inPhone,
+                haulage,
+                agencyFree,
+                matFree,
+                insuredFree,
+                goodsValue,
+                paymentType,
+                deliveryType,
+                remarks,
+                createTime,
+                orderTime,
+                orderValidity,
+                goodsName,
+                goodsNum,
+                goodsPack,
+                goodsUnit,
+                goodsWeight,
+                goodsVolume,
+                station,
+                orderSource,
+                vanId,
+                orderCreateTime
+                )
+          select
+                orderId,
+                outStation,
+                inStation,
+                outName,
+                outPhone,
+                outNum,
+                inName,
+                inPhone,
+                haulage,
+                agencyFree,
+                matFree,
+                insuredFree,
+                goodsValue,
+                paymentType,
+                deliveryType,
+                remarks,
+                createTime,
+                orderTime,
+                orderValidity,
+                goodsName,
+                goodsNum,
+                goodsPack,
+                goodsUnit,
+                goodsWeight,
+                goodsVolume,
+                station,
+                orderSource,
+                #{id},
+                now()
+         from t_goods_order
+        where outStation=#{outStation}
+          and inStation=#{inStation}
+          and orderTime=#{orderTime}
+	</insert>
 </mapper>

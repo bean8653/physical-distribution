@@ -9,34 +9,49 @@
 	<form class="form-horizontal" onsubmit="return false" id="form">
 		<fieldset>
 			<input type="hidden" id="id" name="id">
-			<div class='form-group'>
-				<label class='col-md-2 control-label'>发货站</label>
-				<div class="col-md-10" style="width: 100px">
-					<select class="form-control input-sm" name="outStation" id="outStation">
-					</select>
-				</div>
-			</div>
-			<div class='form-group'>
-				<label class='col-md-2 control-label'>收货站</label>
-				<div class="col-md-10" style="width: 100px">
-					<select class="form-control input-sm" name="inStation" id="inStation">
-					</select>
-				</div>
-			</div>
-			<div class='form-group'>
-				<label class='col-md-2 control-label'>运费</label>
-				<div class='col-md-10'>
-					<input class='form-control' placeholder='free' type='text' name='free' id='free' data-bv-notempty='true' data-bv-notempty-message='free 不能为空'>
-				</div>
-			</div>
 			<input class='form-control' placeholder='status' type='hidden' name='status' id='status'   value="1" >
+			<table class="table">
+				<caption>货车订单基本信息</caption>
+				<tbody>
+				<tr>
+					<td width="10%">发货站</td>
+					<td width="25%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="outStation" id="outStation" >
+							</select>
+						</div>
+					</td>
+					<td width="10%">收货站</td>
+					<td width="25%">
+						<div class="col-md-10" style="width: 100px">
+							<select class="form-control input-sm" name="inStation" id="inStation"  >
+							</select>
+						</div>
+					</td>
+					<td width="10%">运费</td>
+					<td width="10%">
+						<div class='col-md-10'>
+							<input class='form-control' placeholder='free' type='text' name='free' id='free' data-bv-notempty='true'  readonly="readonly">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">订单日期</td>
+					<td width="10%">
+						<input class="form-control" placeholder="订单日期" type="text" name="orderTime" id="orderTime"
+							   data-bv-notempty="true"
+							   data-bv-notempty-message="订单日期不能为空">
+					</td>
+				</tr>
+				</tbody>
+			</table>
 
 			<div class="form-actions">
 				<div class="row" align="center">
 					<div class="col-md-12">
 					    <button class="btn btn-primary" onclick="location.href='tVanOrderList.html'">返回</button>
 						<button class="btn btn-primary" type="submit" onclick="update()">
-							<i class="fa fa-save"></i> 保存
+							<i class="fa fa-save"></i> 装车
 						</button>
 					</div>
 				</div>
@@ -50,10 +65,14 @@
 	<script type="text/javascript" src="../../js/plugin/bootstrapvalidator/bootstrapValidator.min.js"></script>
 	<script type="text/javascript" src="../../js/common.js"></script>
 	<script type="text/javascript" src="../../layui/layui.js"></script>
+	<script type="text/javascript" src="../../js/dict.js"></script>
 	<script type="text/javascript">
 		layui.use(['layer','laydate'], function(){
 		    var layer = layui.layer;
 		});
+
+        showDictSelect("outStation", "station");
+        showDictSelect("inStation", "station");
 		
 		initData();
 		
@@ -93,7 +112,7 @@
 				contentType: "application/json; charset=utf-8",  
 				data : JSON.stringify(formdata),
 				success : function(data) {
-					layer.msg("修改成功", {shift: -1, time: 1000}, function(){
+					layer.msg("装车成功", {shift: -1, time: 1000}, function(){
                         location.href = "tVanOrderList.html";
                     });
 				}

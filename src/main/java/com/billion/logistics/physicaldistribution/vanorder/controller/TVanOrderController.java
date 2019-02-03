@@ -2,6 +2,7 @@ package com.billion.logistics.physicaldistribution.vanorder.controller;
 
 import java.util.List;
 
+import com.billion.logistics.physicaldistribution.vanorder.service.TVanOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +27,10 @@ import io.swagger.annotations.ApiOperation;
 public class TVanOrderController {
 
     @Autowired
+    private TVanOrderService vanOrderService;
+    @Autowired
     private TVanOrderDao tVanOrderDao;
+
 
     @PostMapping
     @ApiOperation(value = "保存")
@@ -45,8 +49,7 @@ public class TVanOrderController {
     @PutMapping
     @ApiOperation(value = "修改")
     public TVanOrder update(@RequestBody TVanOrder tVanOrder) {
-        tVanOrderDao.update(tVanOrder);
-
+        vanOrderService.moveOrderToVan(tVanOrder);
         return tVanOrder;
     }
 
