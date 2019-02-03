@@ -14,8 +14,8 @@ public class SwaggerConfig {
 
     @Bean
     public Docket docket() {
-        return new Docket(DocumentationType.SWAGGER_2).groupName("swagger接口文档")
-                .apiInfo(new ApiInfoBuilder().title("swagger接口文档")
+        return new Docket(DocumentationType.SWAGGER_2).groupName("物流系统订单管理系统接口文档")
+                .apiInfo(new ApiInfoBuilder().title("物流系统订单管理系统接口文档")
                         .version("1.0").build())
                 .select().paths(PathSelectors.any()).build();
     }

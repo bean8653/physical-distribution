@@ -298,3 +298,96 @@
 2019-02-03 09:15:15,460 [http-nio-8080-exec-1] ==>  Preparing: select count(1) from t_notice t left join t_notice_read r on r.noticeId = t.id and r.userId = ? where t.status = 1 and r.userId is null 
 2019-02-03 09:15:15,481 [http-nio-8080-exec-1] ==> Parameters: 1(Long)
 2019-02-03 09:15:15,484 [http-nio-8080-exec-1] <==      Total: 1
+2019-02-03 09:31:04,506 [http-nio-8080-exec-5] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:31:04,508 [http-nio-8080-exec-5] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:31:04,516 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-03 09:31:04,551 [http-nio-8080-exec-7] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:31:04,551 [http-nio-8080-exec-7] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:31:04,553 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-03 09:31:04,577 [http-nio-8080-exec-8] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:31:04,578 [http-nio-8080-exec-8] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:31:04,580 [http-nio-8080-exec-8] <==      Total: 1
+2019-02-03 09:31:04,584 [http-nio-8080-exec-8] ==>  Preparing: select count(1) from t_notice t left join t_notice_read r on r.noticeId = t.id and r.userId = ? where t.status = 1 and r.userId is null 
+2019-02-03 09:31:04,585 [http-nio-8080-exec-8] ==> Parameters: 1(Long)
+2019-02-03 09:31:04,587 [http-nio-8080-exec-8] <==      Total: 1
+2019-02-03 09:31:08,344 [http-nio-8080-exec-9] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:31:08,351 [http-nio-8080-exec-9] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:31:08,358 [http-nio-8080-exec-9] <==      Total: 1
+2019-02-03 09:31:08,376 [http-nio-8080-exec-2] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:31:08,377 [http-nio-8080-exec-2] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:31:08,378 [http-nio-8080-exec-2] <==      Total: 1
+2019-02-03 09:31:08,422 [http-nio-8080-exec-7] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:31:08,422 [http-nio-8080-exec-7] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:31:08,423 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-03 09:31:08,462 [http-nio-8080-exec-7] ==>  Preparing: select count(1) from t_van_order t 
+2019-02-03 09:31:08,471 [http-nio-8080-exec-7] ==> Parameters: 
+2019-02-03 09:31:08,475 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-03 09:31:08,479 [http-nio-8080-exec-7] ==>  Preparing: select * from t_van_order t order by id asc limit ?, ? 
+2019-02-03 09:31:08,485 [http-nio-8080-exec-7] ==> Parameters: 0(Integer), 10(Integer)
+2019-02-03 09:31:08,487 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-03 09:32:36,242 [http-nio-8080-exec-9] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:36,248 [http-nio-8080-exec-9] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:36,249 [http-nio-8080-exec-9] <==      Total: 1
+2019-02-03 09:32:36,260 [http-nio-8080-exec-9] ==>  Preparing: select * from t_van_order t where t.id = ? 
+2019-02-03 09:32:36,261 [http-nio-8080-exec-9] ==> Parameters: 1(Long)
+2019-02-03 09:32:36,264 [http-nio-8080-exec-9] <==      Total: 1
+2019-02-03 09:32:40,660 [http-nio-8080-exec-3] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:40,667 [http-nio-8080-exec-3] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:40,669 [http-nio-8080-exec-3] <==      Total: 1
+2019-02-03 09:32:40,697 [http-nio-8080-exec-8] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:40,698 [http-nio-8080-exec-8] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:40,709 [http-nio-8080-exec-8] <==      Total: 1
+2019-02-03 09:32:40,730 [http-nio-8080-exec-5] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:40,731 [http-nio-8080-exec-5] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:40,733 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-03 09:32:40,738 [http-nio-8080-exec-5] ==>  Preparing: select count(1) from t_van_order t 
+2019-02-03 09:32:40,738 [http-nio-8080-exec-5] ==> Parameters: 
+2019-02-03 09:32:40,740 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-03 09:32:40,742 [http-nio-8080-exec-5] ==>  Preparing: select * from t_van_order t order by id asc limit ?, ? 
+2019-02-03 09:32:40,749 [http-nio-8080-exec-5] ==> Parameters: 0(Integer), 10(Integer)
+2019-02-03 09:32:40,751 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-03 09:32:42,689 [http-nio-8080-exec-7] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:42,699 [http-nio-8080-exec-7] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:42,708 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-03 09:32:42,711 [http-nio-8080-exec-7] ==>  Preparing: select * from t_van_order t where t.id = ? 
+2019-02-03 09:32:42,712 [http-nio-8080-exec-7] ==> Parameters: 1(Long)
+2019-02-03 09:32:42,713 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-03 09:32:49,231 [http-nio-8080-exec-2] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:49,238 [http-nio-8080-exec-2] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:49,240 [http-nio-8080-exec-2] <==      Total: 1
+2019-02-03 09:32:49,258 [http-nio-8080-exec-7] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:49,269 [http-nio-8080-exec-7] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:49,274 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-03 09:32:49,301 [http-nio-8080-exec-5] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:49,301 [http-nio-8080-exec-5] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:49,310 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-03 09:32:49,315 [http-nio-8080-exec-5] ==>  Preparing: select count(1) from t_van_order t 
+2019-02-03 09:32:49,316 [http-nio-8080-exec-5] ==> Parameters: 
+2019-02-03 09:32:49,317 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-03 09:32:49,318 [http-nio-8080-exec-5] ==>  Preparing: select * from t_van_order t order by id asc limit ?, ? 
+2019-02-03 09:32:49,319 [http-nio-8080-exec-5] ==> Parameters: 0(Integer), 10(Integer)
+2019-02-03 09:32:49,321 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-03 09:32:51,305 [http-nio-8080-exec-10] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:32:51,311 [http-nio-8080-exec-10] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:32:51,314 [http-nio-8080-exec-10] <==      Total: 1
+2019-02-03 09:32:51,316 [http-nio-8080-exec-10] ==>  Preparing: select * from t_van_order t where t.id = ? 
+2019-02-03 09:32:51,317 [http-nio-8080-exec-10] ==> Parameters: 1(Long)
+2019-02-03 09:32:51,323 [http-nio-8080-exec-10] <==      Total: 1
+2019-02-03 09:34:56,273 [main] Starting PhysicalDistributionApplication on DESKTOP-DJMNJE1 with PID 14956 (C:\developer\RESEARCH\YH\physical-distribution\target\classes started by czm in C:\developer\RESEARCH\YH\physical-distribution)
+2019-02-03 09:34:56,277 [main] Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2019-02-03 09:34:56,279 [main] No active profile set, falling back to default profiles: default
+2019-02-03 09:35:01,682 [localhost-startStop-1] Initializing filter 'tokenFilter'
+2019-02-03 09:35:01,689 [localhost-startStop-1] Filter 'tokenFilter' configured successfully
+2019-02-03 09:35:04,983 [main] Started PhysicalDistributionApplication in 9.397 seconds (JVM running for 11.328)
+2019-02-03 09:35:13,283 [http-nio-8080-exec-1] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:35:13,332 [http-nio-8080-exec-1] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:35:13,352 [http-nio-8080-exec-1] <==      Total: 1
+2019-02-03 09:35:13,476 [http-nio-8080-exec-7] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:35:13,483 [http-nio-8080-exec-7] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:35:13,484 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-03 09:35:13,520 [http-nio-8080-exec-4] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-03 09:35:13,520 [http-nio-8080-exec-4] ==> Parameters: 9a38a2eb-6e9f-41e8-bf5a-10bfecb572b7(String)
+2019-02-03 09:35:13,523 [http-nio-8080-exec-4] <==      Total: 1
+2019-02-03 09:35:13,531 [http-nio-8080-exec-4] ==>  Preparing: select count(1) from t_notice t left join t_notice_read r on r.noticeId = t.id and r.userId = ? where t.status = 1 and r.userId is null 
+2019-02-03 09:35:13,551 [http-nio-8080-exec-4] ==> Parameters: 1(Long)
+2019-02-03 09:35:13,553 [http-nio-8080-exec-4] <==      Total: 1
