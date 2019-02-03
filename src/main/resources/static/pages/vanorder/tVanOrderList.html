@@ -120,8 +120,9 @@ function init(){
 						        "render": function (data, type, row) {
                 		           var id = row['id'];
                 		           var href = "updateTVanOrder.html?id=" + id;
+                		           var edit = buttonEdit(href, "", pers);
                 		           var del = buttonDel(id, "", pers);
-                                   return  del;
+                                    return edit + del;
                   	            }		
 							},
                 
