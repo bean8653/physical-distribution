@@ -47,9 +47,16 @@ public class TVanOrderController {
     }
 
     @PutMapping
-    @ApiOperation(value = "修改")
+    @ApiOperation(value = "装车")
     public TVanOrder update(@RequestBody TVanOrder tVanOrder) {
         vanOrderService.moveOrderToVan(tVanOrder);
+        return tVanOrder;
+    }
+
+    @PutMapping("/unload")
+    @ApiOperation(value = "卸货")
+    public TVanOrder unload(@RequestBody TVanOrder tVanOrder) {
+        vanOrderService.moveOrderToStation(tVanOrder);
         return tVanOrder;
     }
 

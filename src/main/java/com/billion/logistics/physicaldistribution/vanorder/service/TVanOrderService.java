@@ -5,4 +5,5 @@ import com.billion.logistics.physicaldistribution.vanorder.model.TVanOrder;
 
 public interface TVanOrderService {
     TVanOrder moveOrderToVan(TVanOrder tVanOrder);
+    TVanOrder moveOrderToStation(TVanOrder tVanOrder);
 }

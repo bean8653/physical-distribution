@@ -53,6 +53,9 @@
 						<button class="btn btn-primary" type="submit" onclick="update()">
 							<i class="fa fa-save"></i> 装车
 						</button>
+						<button class="btn btn-primary" type="submit" onclick="unload()">
+							<i class="fa fa-save"></i> 卸车
+						</button>
 					</div>
 				</div>
 			</div>
@@ -118,7 +121,28 @@
 				}
 			});
 		}
-		
+        function unload() {
+            $('#form').bootstrapValidator();
+            var bootstrapValidator = $("#form").data('bootstrapValidator');
+            bootstrapValidator.validate();
+            if(!bootstrapValidator.isValid()){
+                return;
+            }
+
+            var formdata = $("#form").serializeObject();
+
+            $.ajax({
+                type : 'put',
+                url : '/tVanOrders/unload',
+                contentType: "application/json; charset=utf-8",
+                data : JSON.stringify(formdata),
+                success : function(data) {
+                    layer.msg("卸货成功", {shift: -1, time: 1000}, function(){
+                        location.href = "tVanOrderList.html";
+                    });
+                }
+            });
+        }
 	</script>
 </body>
 </html>

@@ -129,4 +129,74 @@
           and inStation=#{inStation}
           and orderTime=#{orderTime}
 	</insert>
+
+    <insert id="moveOrderToStation">
+        insert into t_goods_van_order_his(
+                orderId,
+                outStation,
+                inStation,
+                outName,
+                outPhone,
+                outNum,
+                inName,
+                inPhone,
+                haulage,
+                agencyFree,
+                matFree,
+                insuredFree,
+                goodsValue,
+                paymentType,
+                deliveryType,
+                remarks,
+                createTime,
+                orderTime,
+                orderValidity,
+                goodsName,
+                goodsNum,
+                goodsPack,
+                goodsUnit,
+                goodsWeight,
+                goodsVolume,
+                station,
+                orderSource,
+                vanId,
+                orderCreateTime,
+                hisOrderCreateTime
+        )
+        select
+            orderId,
+            outStation,
+            inStation,
+            outName,
+            outPhone,
+            outNum,
+            inName,
+            inPhone,
+            haulage,
+            agencyFree,
+            matFree,
+            insuredFree,
+            goodsValue,
+            paymentType,
+            deliveryType,
+            remarks,
+            createTime,
+            orderTime,
+            orderValidity,
+            goodsName,
+            goodsNum,
+            goodsPack,
+            goodsUnit,
+            goodsWeight,
+            goodsVolume,
+            station,
+            orderSource,
+            vanId,
+            orderCreateTime,
+            now()
+         from t_goods_van_order
+        where outStation=#{outStation}
+          and inStation=#{inStation}
+          and orderTime=#{orderTime}
+    </insert>
 </mapper>
