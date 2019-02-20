@@ -549,3 +549,4 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have a
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
 	... 112 common frames omitted
+2019-02-08 16:56:07,583 [http-nio-8080-exec-8] DEBUG -[TVanOrderServiceImpl.java:34]- 卸货成功订单个数：1 movedCount:1
