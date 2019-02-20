@@ -3,6 +3,7 @@ package com.billion.logistics.physicaldistribution.order.controller;
 import java.util.List;
 
 import com.billion.logistics.physicaldistribution.order.service.OrderService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ import com.billion.logistics.physicaldistribution.order.model.Order;
 
 import io.swagger.annotations.ApiOperation;
 
+@Api(tags = "物流订单管理模块")
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
@@ -52,7 +54,7 @@ public class OrderController {
     }
 
     @GetMapping
-    @ApiOperation(value = "列表")
+    @ApiOperation(value = "物流订单列表查询")
     public PageTableResponse list(PageTableRequest request) {
         return new PageTableHandler(new CountHandler() {
 

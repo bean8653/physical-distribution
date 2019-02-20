@@ -3,6 +3,7 @@ package com.billion.logistics.physicaldistribution.vanorder.controller;
 import java.util.List;
 
 import com.billion.logistics.physicaldistribution.vanorder.service.TVanOrderService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ import com.billion.logistics.physicaldistribution.vanorder.model.TVanOrder;
 
 import io.swagger.annotations.ApiOperation;
 
+@Api(tags = "货车订单新增，订单装车、卸货管理")
 @RestController
 @RequestMapping("/tVanOrders")
 public class TVanOrderController {

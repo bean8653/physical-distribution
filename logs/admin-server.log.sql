@@ -76,3 +76,51 @@
 2019-02-20 16:49:00,932 [http-nio-8080-exec-10] ==>  Preparing: select count(1) from t_van_order t WHERE status = "1" 
 2019-02-20 16:49:00,933 [http-nio-8080-exec-10] ==> Parameters: 
 2019-02-20 16:49:00,935 [http-nio-8080-exec-10] <==      Total: 1
+2019-02-20 16:57:21,515 [main] Starting PhysicalDistributionApplication on DESKTOP-DJMNJE1 with PID 17152 (C:\developer\RESEARCH\YH\physical-distribution\target\classes started by czm in C:\developer\RESEARCH\YH\physical-distribution)
+2019-02-20 16:57:21,520 [main] Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2019-02-20 16:57:21,524 [main] No active profile set, falling back to default profiles: default
+2019-02-20 16:57:27,601 [localhost-startStop-1] Initializing filter 'tokenFilter'
+2019-02-20 16:57:27,606 [localhost-startStop-1] Filter 'tokenFilter' configured successfully
+2019-02-20 16:57:31,317 [main] Started PhysicalDistributionApplication in 10.79 seconds (JVM running for 12.54)
+2019-02-20 16:57:37,533 [http-nio-8080-exec-1] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 16:57:37,595 [http-nio-8080-exec-1] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 16:57:37,617 [http-nio-8080-exec-1] <==      Total: 1
+2019-02-20 16:57:37,751 [http-nio-8080-exec-4] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 16:57:37,761 [http-nio-8080-exec-4] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 16:57:37,763 [http-nio-8080-exec-4] <==      Total: 1
+2019-02-20 16:57:37,797 [http-nio-8080-exec-7] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 16:57:37,798 [http-nio-8080-exec-7] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 16:57:37,800 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-20 16:57:37,809 [http-nio-8080-exec-7] ==>  Preparing: select count(1) from t_notice t left join t_notice_read r on r.noticeId = t.id and r.userId = ? where t.status = 1 and r.userId is null 
+2019-02-20 16:57:37,835 [http-nio-8080-exec-7] ==> Parameters: 1(Long)
+2019-02-20 16:57:37,840 [http-nio-8080-exec-7] <==      Total: 1
+2019-02-20 17:00:34,835 [main] Starting PhysicalDistributionApplication on DESKTOP-DJMNJE1 with PID 16836 (C:\developer\RESEARCH\YH\physical-distribution\target\classes started by czm in C:\developer\RESEARCH\YH\physical-distribution)
+2019-02-20 17:00:34,840 [main] Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2019-02-20 17:00:34,842 [main] No active profile set, falling back to default profiles: default
+2019-02-20 17:00:40,535 [localhost-startStop-1] Initializing filter 'tokenFilter'
+2019-02-20 17:00:40,541 [localhost-startStop-1] Filter 'tokenFilter' configured successfully
+2019-02-20 17:00:44,453 [main] Started PhysicalDistributionApplication in 10.522 seconds (JVM running for 12.222)
+2019-02-20 17:00:55,117 [http-nio-8080-exec-3] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 17:00:55,171 [http-nio-8080-exec-3] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 17:00:55,192 [http-nio-8080-exec-3] <==      Total: 1
+2019-02-20 17:00:55,336 [http-nio-8080-exec-5] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 17:00:55,343 [http-nio-8080-exec-5] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 17:00:55,345 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-20 17:00:55,376 [http-nio-8080-exec-4] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 17:00:55,377 [http-nio-8080-exec-4] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 17:00:55,379 [http-nio-8080-exec-4] <==      Total: 1
+2019-02-20 17:00:55,388 [http-nio-8080-exec-4] ==>  Preparing: select count(1) from t_notice t left join t_notice_read r on r.noticeId = t.id and r.userId = ? where t.status = 1 and r.userId is null 
+2019-02-20 17:00:55,428 [http-nio-8080-exec-4] ==> Parameters: 1(Long)
+2019-02-20 17:00:55,433 [http-nio-8080-exec-4] <==      Total: 1
+2019-02-20 17:00:58,302 [http-nio-8080-exec-5] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 17:00:58,308 [http-nio-8080-exec-5] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 17:00:58,314 [http-nio-8080-exec-5] <==      Total: 1
+2019-02-20 17:00:58,340 [http-nio-8080-exec-6] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 17:00:58,341 [http-nio-8080-exec-6] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 17:00:58,343 [http-nio-8080-exec-6] <==      Total: 1
+2019-02-20 17:00:58,389 [http-nio-8080-exec-9] ==>  Preparing: select * from t_token t where t.id = ? 
+2019-02-20 17:00:58,390 [http-nio-8080-exec-9] ==> Parameters: 9a0c77f1-247a-4e04-a3d6-8860a8726aa3(String)
+2019-02-20 17:00:58,391 [http-nio-8080-exec-9] <==      Total: 1
+2019-02-20 17:00:58,443 [http-nio-8080-exec-9] ==>  Preparing: select count(1) from t_van_order t WHERE status = "1" 
+2019-02-20 17:00:58,445 [http-nio-8080-exec-9] ==> Parameters: 
+2019-02-20 17:00:58,450 [http-nio-8080-exec-9] <==      Total: 1

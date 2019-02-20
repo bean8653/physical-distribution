@@ -5,6 +5,7 @@ import java.util.List;
 import com.billion.logistics.physicaldistribution.comm.page.table.PageTableHandler;
 import com.billion.logistics.physicaldistribution.comm.page.table.PageTableRequest;
 import com.billion.logistics.physicaldistribution.comm.page.table.PageTableResponse;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,7 @@ import com.billion.logistics.physicaldistribution.van.model.Van;
 
 import io.swagger.annotations.ApiOperation;
 
+@Api(tags = "货车管理")
 @RestController
 @RequestMapping("/vans")
 public class VanController {
@@ -50,7 +52,7 @@ public class VanController {
     }
 
     @GetMapping
-    @ApiOperation(value = "列表")
+    @ApiOperation(value = "货车查询列表")
     public PageTableResponse list(PageTableRequest request) {
         return new PageTableHandler(new PageTableHandler.CountHandler() {
 
