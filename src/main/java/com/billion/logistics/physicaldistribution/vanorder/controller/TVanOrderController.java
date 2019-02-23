@@ -2,6 +2,7 @@ package com.billion.logistics.physicaldistribution.vanorder.controller;
 
 import java.util.List;
 
+import com.billion.logistics.physicaldistribution.vanorder.dto.VanOrderDto;
 import com.billion.logistics.physicaldistribution.vanorder.service.TVanOrderService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,7 +62,12 @@ public class TVanOrderController {
         vanOrderService.moveOrderToStation(tVanOrder);
         return tVanOrder;
     }
-
+    @PutMapping("/loadByOrderId")
+    @ApiOperation(value = "按订单编号装车")
+    public TVanOrder loadByOrderId(@RequestBody VanOrderDto vanOrderDto) {
+        vanOrderService.loadByOrderId(vanOrderDto);
+        return vanOrderDto;
+    }
     @GetMapping
     @ApiOperation(value = "列表")
     public PageTableResponse list(PageTableRequest request) {

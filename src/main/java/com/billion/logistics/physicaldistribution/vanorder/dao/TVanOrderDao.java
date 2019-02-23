@@ -37,4 +37,6 @@ public interface TVanOrderDao {
     int moveVanOrder(TVanOrder tVanOrder);
     @Update("update t_van_order set status='0' where id = #{id}")
     int updateVan(TVanOrder tVanOrder);
+
+    int loadByOrderId(@Param("orderid")String orderid,TVanOrder tVanOrder);
 }
