@@ -6,7 +6,6 @@
 	<sql id="where">
 		<where>
             and status = "1"
-
             <if test="params.id != null and params.id != ''">
 				and id = #{params.id} 
 			</if>
@@ -200,69 +199,69 @@
 
     <insert id="loadByOrderId">
         insert into t_goods_van_order(
-        orderId,
-        outStation,
-        inStation,
-        outName,
-        outPhone,
-        outNum,
-        inName,
-        inPhone,
-        haulage,
-        agencyFree,
-        matFree,
-        insuredFree,
-        goodsValue,
-        paymentType,
-        deliveryType,
-        remarks,
-        createTime,
-        orderTime,
-        orderValidity,
-        goodsName,
-        goodsNum,
-        goodsPack,
-        goodsUnit,
-        goodsWeight,
-        goodsVolume,
-        station,
-        orderSource,
-        vanId,
-        orderCreateTime
+            orderId,
+            outStation,
+            inStation,
+            outName,
+            outPhone,
+            outNum,
+            inName,
+            inPhone,
+            haulage,
+            agencyFree,
+            matFree,
+            insuredFree,
+            goodsValue,
+            paymentType,
+            deliveryType,
+            remarks,
+            createTime,
+            orderTime,
+            orderValidity,
+            goodsName,
+            goodsNum,
+            goodsPack,
+            goodsUnit,
+            goodsWeight,
+            goodsVolume,
+            station,
+            orderSource,
+            vanId,
+            orderCreateTime
         )
         select
-        orderId,
-        outStation,
-        inStation,
-        outName,
-        outPhone,
-        outNum,
-        inName,
-        inPhone,
-        haulage,
-        agencyFree,
-        matFree,
-        insuredFree,
-        goodsValue,
-        paymentType,
-        deliveryType,
-        remarks,
-        createTime,
-        orderTime,
-        orderValidity,
-        goodsName,
-        goodsNum,
-        goodsPack,
-        goodsUnit,
-        goodsWeight,
-        goodsVolume,
-        station,
-        orderSource,
-        #{id},
-        now()
-        from t_goods_order
-        where outStation=#{outStation}
-        and inStation=#{inStation}
-        and orderId=#{orderId}
+            orderId,
+            outStation,
+            inStation,
+            outName,
+            outPhone,
+            outNum,
+            inName,
+            inPhone,
+            haulage,
+            agencyFree,
+            matFree,
+            insuredFree,
+            goodsValue,
+            paymentType,
+            deliveryType,
+            remarks,
+            createTime,
+            orderTime,
+            orderValidity,
+            goodsName,
+            goodsNum,
+            goodsPack,
+            goodsUnit,
+            goodsWeight,
+            goodsVolume,
+            station,
+            orderSource,
+            #{id},
+            now()
+            from t_goods_order
+            where outStation=#{outStation}
+            and inStation=#{inStation}
+            and orderId=#{orderId}
     </insert>
 </mapper>

@@ -904,3 +904,111 @@ CREATE TABLE `t_van_order` (
 -- Records of t_van_order
 -- ----------------------------
 INSERT INTO `t_van_order` VALUES ('1', '5301', '5309', '50', '2019-02-02 15:05:02', '1');
+
+
+CREATE VIEW order_list AS
+SELECT
+	orderId,
+	outStation,
+	inStation,
+	outName,
+	outPhone,
+	outNum,
+	inName,
+	inPhone,
+	haulage,
+	agencyFree,
+	matFree,
+	insuredFree,
+	goodsValue,
+	paymentType,
+	deliveryType,
+	remarks,
+	createTime,
+	orderTime,
+	orderValidity,
+	goodsName,
+	goodsNum,
+	goodsPack,
+	goodsUnit,
+	goodsWeight,
+	goodsVolume,
+	station,
+	orderSource,
+	vanId,
+	orderCreateTime,
+  now() hisOrderCreateTime,
+  '已装车' flag
+FROM
+	t_goods_van_order
+UNION
+	SELECT
+		orderId,
+		outStation,
+		inStation,
+		outName,
+		outPhone,
+		outNum,
+		inName,
+		inPhone,
+		haulage,
+		agencyFree,
+		matFree,
+		insuredFree,
+		goodsValue,
+		paymentType,
+		deliveryType,
+		remarks,
+		createTime,
+		orderTime,
+		orderValidity,
+		goodsName,
+		goodsNum,
+		goodsPack,
+		goodsUnit,
+		goodsWeight,
+		goodsVolume,
+		station,
+		orderSource,
+		vanId,
+		orderCreateTime,
+		hisOrderCreateTime,
+   '已卸车' flag
+	FROM
+		t_goods_van_order_his
+	UNION
+		SELECT
+			orderId,
+			outStation,
+			inStation,
+			outName,
+			outPhone,
+			outNum,
+			inName,
+			inPhone,
+			haulage,
+			agencyFree,
+			matFree,
+			insuredFree,
+			goodsValue,
+			paymentType,
+			deliveryType,
+			remarks,
+			createTime,
+			orderTime,
+			orderValidity,
+			goodsName,
+			goodsNum,
+			goodsPack,
+			goodsUnit,
+			goodsWeight,
+			goodsVolume,
+			station,
+			orderSource,
+			'' vanId,
+			now() orderCreateTime,
+      now() hisOrderCreateTime,
+      '新订单' flag
+		FROM
+			t_goods_order;
+
