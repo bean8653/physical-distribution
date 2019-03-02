@@ -32,15 +32,25 @@ public class TVanOrderServiceImpl implements TVanOrderService {
     }
 
     @Override
-    public TVanOrder moveOrderToStation(TVanOrder tVanOrder) {
-        int movingCount=tVanOrderDao.moveOrderToStation(tVanOrder);
-        int movedCount= tVanOrderDao.moveVanOrder(tVanOrder);
-        log.debug("卸货成功订单个数："+ movingCount+" movedCount:"+movedCount);
+    public TVanOrder moveOrderToStation(VanOrderDto vanOrderDto) {
+//        int movingCount=tVanOrderDao.moveOrderToStation(vanOrderDto);
+//        int movedCount= tVanOrderDao.moveVanOrder(vanOrderDto);
+        List<String> orderIds=vanOrderDto.getOrderIds();
+        if(orderIds.size()>0){
+            for (String orderId:orderIds){
+                tVanOrderDao.moveOrderToStation(orderId,vanOrderDto);
+            }
+            log.debug("卸货成功订单个数："+ orderIds.size());
+        }else{
+            throw new IllegalArgumentException("没有卸货订单个数请核实操作！");
+        }
+
+        tVanOrderDao.updateVan(vanOrderDto);
 //        if (movingCount!=movedCount) {
 //            throw new Exception("装车出错，请核实装车订单数与订单数！");
 //        }
-        tVanOrderDao.updateVan(tVanOrder);
-        return tVanOrder;
+
+        return vanOrderDto;
     }
 
     @Override

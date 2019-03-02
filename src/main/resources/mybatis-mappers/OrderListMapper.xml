@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.billion.logistics.physicaldistribution.orderlist.dao.OrderListDao">
+
+	<sql id="where">
+		<where>
+			<if test="params.orderId != null and params.orderId != ''">
+				and orderId = #{params.orderId} 
+			</if>
+			<if test="params.outStation != null and params.outStation != ''">
+				and outStation = #{params.outStation} 
+			</if>
+			<if test="params.inStation != null and params.inStation != ''">
+				and inStation = #{params.inStation} 
+			</if>
+			<if test="params.outName != null and params.outName != ''">
+				and outName = #{params.outName} 
+			</if>
+			<if test="params.outPhone != null and params.outPhone != ''">
+				and outPhone = #{params.outPhone} 
+			</if>
+			<if test="params.outNum != null and params.outNum != ''">
+				and outNum = #{params.outNum} 
+			</if>
+			<if test="params.inName != null and params.inName != ''">
+				and inName = #{params.inName} 
+			</if>
+			<if test="params.inPhone != null and params.inPhone != ''">
+				and inPhone = #{params.inPhone} 
+			</if>
+			<if test="params.haulage != null and params.haulage != ''">
+				and haulage = #{params.haulage} 
+			</if>
+			<if test="params.agencyFree != null and params.agencyFree != ''">
+				and agencyFree = #{params.agencyFree} 
+			</if>
+			<if test="params.matFree != null and params.matFree != ''">
+				and matFree = #{params.matFree} 
+			</if>
+			<if test="params.insuredFree != null and params.insuredFree != ''">
+				and insuredFree = #{params.insuredFree} 
+			</if>
+			<if test="params.goodsValue != null and params.goodsValue != ''">
+				and goodsValue = #{params.goodsValue} 
+			</if>
+			<if test="params.paymentType != null and params.paymentType != ''">
+				and paymentType = #{params.paymentType} 
+			</if>
+			<if test="params.deliveryType != null and params.deliveryType != ''">
+				and deliveryType = #{params.deliveryType} 
+			</if>
+			<if test="params.remarks != null and params.remarks != ''">
+				and remarks = #{params.remarks} 
+			</if>
+			<if test="params.createTime != null and params.createTime != ''">
+				and createTime = #{params.createTime} 
+			</if>
+			<if test="params.orderTime != null and params.orderTime != ''">
+				and orderTime = #{params.orderTime} 
+			</if>
+			<if test="params.orderValidity != null and params.orderValidity != ''">
+				and orderValidity = #{params.orderValidity} 
+			</if>
+			<if test="params.goodsName != null and params.goodsName != ''">
+				and goodsName = #{params.goodsName} 
+			</if>
+			<if test="params.goodsNum != null and params.goodsNum != ''">
+				and goodsNum = #{params.goodsNum} 
+			</if>
+			<if test="params.goodsPack != null and params.goodsPack != ''">
+				and goodsPack = #{params.goodsPack} 
+			</if>
+			<if test="params.goodsUnit != null and params.goodsUnit != ''">
+				and goodsUnit = #{params.goodsUnit} 
+			</if>
+			<if test="params.goodsWeight != null and params.goodsWeight != ''">
+				and goodsWeight = #{params.goodsWeight} 
+			</if>
+			<if test="params.goodsVolume != null and params.goodsVolume != ''">
+				and goodsVolume = #{params.goodsVolume} 
+			</if>
+			<if test="params.station != null and params.station != ''">
+				and station = #{params.station} 
+			</if>
+			<if test="params.orderSource != null and params.orderSource != ''">
+				and orderSource = #{params.orderSource} 
+			</if>
+			<if test="params.vanId != null and params.vanId != ''">
+				and vanId = #{params.vanId} 
+			</if>
+			<if test="params.orderCreateTime != null and params.orderCreateTime != ''">
+				and orderCreateTime = #{params.orderCreateTime} 
+			</if>
+			<if test="params.hisOrderCreateTime != null and params.hisOrderCreateTime != ''">
+				and hisOrderCreateTime = #{params.hisOrderCreateTime} 
+			</if>
+			<if test="params.flag != null and params.flag != ''">
+				and flag = #{params.flag} 
+			</if>
+		
+		</where>
+	</sql>
+
+	<select id="count" resultType="int">
+		select count(1) from order_list t
+		<include refid="where" />
+	</select>
+
+	<select id="list" resultType="OrderList">
+		select * from order_list t
+		<include refid="where" />
+		${params.orderBy}
+		limit #{offset}, #{limit}
+	</select>
+
+</mapper>

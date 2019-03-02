@@ -195,6 +195,7 @@
         where outStation=#{outStation}
           and inStation=#{inStation}
           and orderTime=#{orderTime}
+          and orderId=#{orderId}
     </insert>
 
     <insert id="loadByOrderId">

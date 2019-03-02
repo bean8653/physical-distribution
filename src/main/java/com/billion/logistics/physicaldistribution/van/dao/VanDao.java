@@ -24,7 +24,7 @@ public interface VanDao {
     int update(Van van);
 
     @Options(useGeneratedKeys = true, keyProperty = "id")
-    @Insert("insert into t_van(phone, password, name, drivinglicensenum, address, vannum, company, enginetype, chassisnum, vanmodel, vantype, vanload, vanlength, vanvalidity, createdate) values(#{phone}, #{password}, #{name}, #{drivinglicensenum}, #{address}, #{vannum}, #{company}, #{enginetype}, #{chassisnum}, #{vanmodel}, #{vantype}, #{vanload}, #{vanlength}, '1', , now())")
+    @Insert("insert into t_van(phone, password, name, drivinglicensenum, address, vannum, company, enginetype, chassisnum, vanmodel, vantype, vanload, vanlength, vanvalidity, createdate) values(#{phone}, #{password}, #{name}, #{drivinglicensenum}, #{address}, #{vannum}, #{company}, #{enginetype}, #{chassisnum}, #{vanmodel}, #{vantype}, #{vanload}, #{vanlength}, '1',  now())")
     int save(Van van);
 
     int count(@Param("params") Map<String, Object> params);

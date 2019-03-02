@@ -3,6 +3,7 @@ package com.billion.logistics.physicaldistribution.vanorder.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.billion.logistics.physicaldistribution.vanorder.dto.VanOrderDto;
 import org.apache.ibatis.annotations.*;
 
 import com.billion.logistics.physicaldistribution.vanorder.model.TVanOrder;
@@ -31,12 +32,13 @@ public interface TVanOrderDao {
     @Delete("delete from t_goods_order where outStation=#{outStation} and inStation=#{inStation} and orderTime=#{orderTime}")
     int moveOrder(TVanOrder tVanOrder);
 
-    int moveOrderToStation(TVanOrder tVanOrder);
+    int moveOrderToStation(@Param("orderid")String orderid,VanOrderDto vanOrderDto);
 
     @Delete("delete from t_goods_van_order where outStation=#{outStation} and inStation=#{inStation} and orderTime=#{orderTime}")
     int moveVanOrder(TVanOrder tVanOrder);
     @Update("update t_van_order set status='0' where id = #{id}")
     int updateVan(TVanOrder tVanOrder);
 
-    int loadByOrderId(@Param("orderid")String orderid,TVanOrder tVanOrder);
+    int loadByOrderId(@Param("orderid")String orderid,VanOrderDto vanOrderDto);
+
 }
