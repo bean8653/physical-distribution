@@ -158,7 +158,8 @@
                 orderSource,
                 vanId,
                 orderCreateTime,
-                hisOrderCreateTime
+                hisOrderCreateTime,
+                signIn
         )
         select
             orderId,
@@ -190,7 +191,8 @@
             orderSource,
             vanId,
             orderCreateTime,
-            now()
+            now(),
+            '0'
          from t_goods_van_order
         where outStation=#{outStation}
           and inStation=#{inStation}
