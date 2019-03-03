@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>订单编号查询</title>
 <link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" media="screen" href="../../css/dataTables.bootstrap.min.css">
 <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
@@ -20,6 +20,23 @@
 										<div class="form-group">
 											订单编号：
 											<input id="orderId" type="text" class="form-control" placeholder="orderId">
+											发货站：
+											<select class="form-control input-sm" id="outStation">
+											</select>
+											收货站：
+											<select class="form-control input-sm" id="inStation">
+											</select>
+											付款方式：
+											<select class="form-control input-sm" id="paymentType">
+											</select>
+											提送方式：
+											<select class="form-control input-sm" id="deliveryType">
+											</select>
+											订单来源：
+											<select class="form-control input-sm" id="orderSource">
+											</select>
+                                            货运订单编号：
+                                            <input id="vanId" type="text" class="form-control" placeholder="vanId">
 											<button id="searchBt" class="layui-btn layui-btn-sm"><i class="layui-icon">&#xe615;</i>搜索</button>
 										</div>
 									</form>
@@ -114,6 +131,12 @@ function init(){
         		"type":"get",
         		"data":function(d){
     				d.orderId = $("#orderId").val();
+                    d.outStation = $("#outStation").val();
+                    d.inStation = $("#inStation").val();
+                    d.paymentType = $("#paymentType").val();
+                    d.deliveryType = $("#deliveryType").val();
+                    d.orderSource = $("#orderSource").val();
+                    d.vanId = $("#vanId").val();
     			}
         	},
         	"dom": "<'dt-toolbar'r>t<'dt-toolbar-footer'<'col-sm-10 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-10' p v>>",	
